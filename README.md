@@ -20,6 +20,4 @@ Currently, this extension isn't available in the Google Chrome extension store, 
 4. Set up the keys you want to use for each Xbox controller button using the edit button, then click "Save." You can also create your own configurations and save them to use later through the export function.
 5. Done! You can now use the keyboard and mouse in Xbox Cloud Gaming.
 
-## 📷 Screenshots
-![Screenshot N°1](/images/cap1.png)
-![Screenshot N°2](/images/cap2.png)
+
