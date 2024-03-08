@@ -3,7 +3,7 @@ A browser extension that enables keyboard and mouse integration in Xbox Cloud Ga
 <br>
 
 support https://www.buymeacoffee.com/donagh
-<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="donagh" data-color="#5F7FFF" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
+
 ## ✨ Installation
 Currently, this extension isn't available in the Google Chrome extension store, so manual installation is required. Follow these steps:
 1. Download the latest version of the extension from this github
