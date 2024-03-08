@@ -348,32 +348,32 @@ function OnboardingIntro({ onDismiss }) {
     const pinScreenshot = (0, pageInjectUtils_1.getInjectedImagePath)('pin-screenshot.png');
     return (react_1.default.createElement(react_responsive_modal_1.Modal, { center: true, open: true, onClose: onDismiss, showCloseIcon: false, focusTrapped: true, closeOnEsc: false, closeOnOverlayClick: false },
         react_1.default.createElement("div", { className: "explanation-modal-xmnk" },
-           react_1.default.createElement("h1", null, "Welcome to Clodu Gaming Keyboard and Mouse for Xbox created by Fvitu!"),
-             react_1.default.createElement("p", null,
-                 react_1.default.createElement("strong", null, "Use the extension's popup to configure your key shortcuts.")),
-             react_1.default.createElement("p", null,
-                 "To access the extension popup, simply click on the ",
-                 react_1.default.createElement("img", { src: icon16 }),
-                 " icon at the top right of your browser. If you don't see the ",
-                 react_1.default.createElement("img", { src: icon16 }),
-                 " icon in your extension toolbar, use the following steps to pin it:"),
-             react_1.default.createElement("ol", null,
-                 react_1.default.createElement("li", null, "Click the extensions puzzle icon at the top right of the browser toolbar"),
-                 react_1.default.createElement("li", null, "Click the pin icon next to the red Xcloud mouse icon")),
-             react_1.default.createElement("p", null,
-                 react_1.default.createElement("strong", null, "Other important notes:")),
-             react_1.default.createElement("ul", null,
-                 react_1.default.createElement("li", null, "You may see a warning when launching a game in XCloud that a controller has not been found to play; just click \"Continue anyway\""),
-                 react_1.default.createElement("li", null,
-                     "Mouse control can be enabled by clicking the overlay that appears after launching a game, and can be exited by pressing the " key,
-                     react_1.default.createElement("kbd", null, "Esc"),
-                     ""),
-                 react_1.default.createElement("li", null,
-                     "Mouse sensitivity can be changed in the extension popup, however, for best results.",
-                     ' ',
+            react_1.default.createElement("h1", null, "Welcome to Keyboard and Mouse for Xbox Cloud Gaming created by donagh!"),
+            react_1.default.createElement("p", null,
+                react_1.default.createElement("strong", null, "Use the extension's popup to configure your key shortcuts.")),
+            react_1.default.createElement("p", null,
+                "To access the extension popup, simply click on the",
+                react_1.default.createElement("img", { src: icon16 }),
+                " icon at the top right of your browser. If you don't see the ",
+                react_1.default.createElement("img", { src: icon16 }),
+                " icon on your extension toolbar, use the following steps to attach it:"),
+            react_1.default.createElement("ol", null,
+                react_1.default.createElement("li", null, "Click the extensions puzzle icon at the top right of the browser Tools bar"),
+                react_1.default.createElement("li", null, "Click the pin icon next to the red Xcloud mouse icon")),
+            react_1.default.createElement("p", null,
+                react_1.default.createElement("strong", null, "Other important notes:")),
+            react_1.default.createElement("ul", null,
+                react_1.default.createElement("li", null, "You may see a warning when launching a game in XCloud that a controller has not been found to play; just click on \"Continue anyway\""),
+                react_1.default.createElement("li", null,
+                    "Mouse control can be enabled by clicking the overlay that appears after launching a game, and can be exited by pressing the Key",
+                    react_1.default.createElement("kbd", null, "Esc"),
+                    ""),
+                react_1.default.createElement("li", null,
+                    "Mouse sensitivity can be changed in the extension popup, however, for best results.",
+                    ' ',
                     react_1.default.createElement("u", null, "It's also important to adjust the controller's stick sensitivity and dead zone options within each game's settings as well."))),
             react_1.default.createElement("div", { style: { textAlign: 'center' } },
-                react_1.default.createElement("button", { className: "agree", disabled: !canDismiss, onClick: onDismiss }, "Entendido")))));
+                react_1.default.createElement("button", { className: "agree", disabled: !canDismiss, onClick: onDismiss }, "agree")))));
 }
 exports["default"] = OnboardingIntro;
 
@@ -922,7 +922,7 @@ function checkIfInGame() {
 // Disable the fake gamepad and let them use their real gamepad
 function disableVirtualGamepad() {
     if ((0, gamepadSimulator_1.isEnabled)()) {
-        (0, snackbar_1.showToast)('Mouse/keyboard desactivado');
+        (0, snackbar_1.showToast)('Mouse/keyboard deactive');
     }
     (0, browserEventProcessor_1.disableConfig)();
     state_1.store.dispatch(state_1.actions.updatePreset({ presetName: null, preset: null }));
@@ -933,7 +933,7 @@ function updateActiveGamepadConfig(name, config) {
         disableVirtualGamepad();
         return;
     }
-    (0, snackbar_1.showToast)(`'${name}' preset active`);
+    (0, snackbar_1.showToast)(`'${name}' active preset`);
     (0, browserEventProcessor_1.enableConfig)(config);
     state_1.store.dispatch(state_1.actions.updatePreset({ presetName: name, preset: config }));
 }

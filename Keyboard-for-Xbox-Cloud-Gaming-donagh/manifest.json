@@ -40,7 +40,7 @@
       "matches": [ "*://*.xbox.com/*", "https://gamepad-tester.com/" ],
       "run_at": "document_start"
    } ],
-   "description": "Play Xbox Cloud Gaming with a keyboard and mouse. Application developed by Fvitu.",
+   "description": "Play Xbox Cloud Gaming with a keyboard and mouse. Application developed by Donagh.",
    "icons": {
       "128": "icon-128.png",
       "16": "icon-16.png",
@@ -51,7 +51,6 @@
    "name": "Keyboard for Xbox Cloud Gaming (donagh)",
    "permissions": [ "storage" ],
    "short_name": "xCloud KB&M",
-   "update_url": "https://clients2.google.com/service/update2/crx",
    "version": "3.1",
    "web_accessible_resources": [ {
       "matches": [ "https://www.xbox.com/*", "https://gamepad-tester.com/*" ],

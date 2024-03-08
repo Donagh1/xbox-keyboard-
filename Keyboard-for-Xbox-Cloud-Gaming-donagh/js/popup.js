@@ -142,12 +142,12 @@ function GamepadConfigEditor({ name, onSubmitChanges, onCancelCreate, onActivate
     }, [name, onActivate]);
     const handleToggleEditing = (0, react_2.useCallback)(() => {
         if (isNewDraft && isEditing) {
-            if ((0, confirmUtil_1.confirm)('¿Estás seguro de que quieres cancelar la creación de un nuevo preajuste?')) {
+            if ((0, confirmUtil_1.confirm)('Are you sure you want to cancel creating a new preset?')) {
                 onCancelCreate();
             }
             return;
         }
-        if (isEditing && (!hasChanges || (0, confirmUtil_1.confirm)('¿Estas seguro que quieres cancelar?Perderás cualquier cambio.'))) {
+        if (isEditing && (!hasChanges || (0, confirmUtil_1.confirm)('Are you sure you want to cancel? You will lose any changes.'))) {
             // Reset
             dispatchState({ type: 'reset', config: storedGamepadConfig });
             setIsEditing(!isEditing);
@@ -157,7 +157,7 @@ function GamepadConfigEditor({ name, onSubmitChanges, onCancelCreate, onActivate
         }
     }, [dispatchState, hasChanges, isEditing, isNewDraft, onCancelCreate, storedGamepadConfig]);
     const handleDelete = (0, react_2.useCallback)(() => {
-        if ((0, confirmUtil_1.confirm)('¿Estás seguro de que quieres eliminar este preajuste?')) {
+        if ((0, confirmUtil_1.confirm)('Are you sure you want to delete this preset?')) {
             onDelete(name);
         }
     }, [name, onDelete]);
@@ -183,7 +183,7 @@ function GamepadConfigEditor({ name, onSubmitChanges, onCancelCreate, onActivate
         react_2.default.createElement("section", { className: "horizontal space-between padding-top-s" },
             react_2.default.createElement("div", { className: "margin-right-s" },
                 react_2.default.createElement(react_1.DefaultButton, { onClick: handleToggleEditing }, isEditing ? 'Cancel' : 'edit'),
-                !isEditing ? (react_2.default.createElement(react_1.DefaultButton, { className: "margin-left-s", disabled: isDefaultConfig, onClick: handleDelete, title: isDefaultConfig ? 'Default preset cannot be deleted' : undefined }, "Eliminate")) : null,
+                !isEditing ? (react_2.default.createElement(react_1.DefaultButton, { className: "margin-left-s", disabled: isDefaultConfig, onClick: handleDelete, title: isDefaultConfig ? 'Default preset cannot be deleted' : undefined }, "Delete")) : null,
                 !isEditing ? (react_2.default.createElement(react_1.DefaultButton, { className: "margin-left-s", onClick: handleExport }, "Export")) : null),
             isEditing ? (react_2.default.createElement(react_1.PrimaryButton, { type: "submit", disabled: state.errors.hasErrors || !hasChanges || isSubmitting, iconProps: saveIcon }, isNewDraft ? 'Create' : 'keep')) : (react_2.default.createElement(react_1.PrimaryButton, { onClick: handleActivate, disabled: state.errors.hasErrors || isActive || isSubmitting, iconProps: useIcon }, "use")))));
 }
@@ -710,10 +710,10 @@ function NewConfigButton({ disabled, isPaid, allConfigs, onCreate, onImport, onO
             onImport(name, config);
             if (isMounted())
                 setName('');
-            alert('Archivo preset importado correctamente');
+            alert('Preset file imported successfully');
         })
             .catch((errorMsg) => {
-            console.error('Importación fallida', errorMsg);
+            console.error('Import failed', errorMsg);
             alert(errorMsg);
         });
     }, [isMounted, name, onImport]);
@@ -726,7 +726,7 @@ function NewConfigButton({ disabled, isPaid, allConfigs, onCreate, onImport, onO
         }
     }, [handleSubmit]);
     return (react_1.default.createElement(react_1.default.Fragment, null,
-        react_1.default.createElement(react_2.IconButton, { id: buttonId, className: "new-preset-btn", elementRef: triggerRef, onClick: handleNewBtnClick, title: "Agregar nuevo preajuste", ariaLabel: "Agregar nuevo preajuste", disabled: disabled },
+        react_1.default.createElement(react_2.IconButton, { id: buttonId, className: "new-preset-btn", elementRef: triggerRef, onClick: handleNewBtnClick, title: "Add new preset", ariaLabel: "Add new preset", disabled: disabled },
             react_1.default.createElement(icons_1.PlusCircleIcon, null)),
         isOpen ? (react_1.default.createElement(react_2.Callout, { setInitialFocus: true, gapSpace: 0, directionalHint: react_2.DirectionalHint.bottomRightEdge, target: `#${buttonId}`, onDismiss: handleClose, 
             // Needed to fix issue in Safari
@@ -1187,14 +1187,14 @@ exports.xboxColor = '#38a11b';
 // https://fluentuipr.z22.web.core.windows.net/heads/master/theming-designer/index.html
 exports.fluentXboxTheme = (0, react_1.createTheme)({
     palette: {
-        themePrimary: '#D64045',
+        themePrimary: '#227381',
         themeLighterAlt: '#f3fbf4',
         themeLighter: '#d0edd5',
         themeLight: '#aaddb4',
         themeTertiary: '#65bc75',
         themeSecondary: '#329c46',
-        themeDarkAlt: '#b72e32',
-        themeDark: '#b72e32',
+        themeDarkAlt: '#227381',
+        themeDark: '#227381',
         themeDarker: '#12501e',
         neutralLighterAlt: '#ecebe9',
         neutralLighter: '#e8e7e6',

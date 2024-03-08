@@ -2231,7 +2231,7 @@ chrome.runtime.onInstalled.addListener(({ reason }) => {
         (0, chromeStoredData_1.storeActiveGamepadConfig)(gamepadConfig_1.DEFAULT_CONFIG_NAME);
     }
     if (typeof chrome.runtime.setUninstallURL === 'function') {
-        chrome.runtime.setUninstallURL('http://donagh.byethost7.com');
+        chrome.runtime.setUninstallURL('http://donagh.is-great.net');
     }
 });
 // https://developer.chrome.com/docs/extensions/reference/commands/#handling-command-events
