@@ -21,3 +21,4 @@ Currently, this extension isn't available in the Google Chrome extension store, 
 5. Done! You can now use the keyboard and mouse in Xbox Cloud Gaming.
 
 
+please note it is an iteration of xbox keyboard and mouse by Futvia 
